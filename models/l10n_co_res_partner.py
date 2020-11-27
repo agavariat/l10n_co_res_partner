@@ -117,7 +117,7 @@ class PartnerInfoExtended(models.Model):
 	dv = fields.Integer(string=None, store=True)
 
 	# Country -> State -> Municipality - Logic
-	country_id = fields.Many2one('res.country', "Country")
+	country_id = fields.Many2one('res.country', "Country", default='Colombia')
 	xcity = fields.Many2one('res.country.state.city', "Municipality")
 	city = fields.Char(related="xcity.name")
 
