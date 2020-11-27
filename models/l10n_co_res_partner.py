@@ -42,7 +42,7 @@ class CountryStateCity(models.Model):
 					   required=True)
 	name = fields.Char('City Name', size=64, required=True)
 	state_id = fields.Many2one('res.country.state', 'State', required=True)
-	country_id = fields.Many2one('res.country', 'Country', required=True, default="Colombia")
+	country_id = fields.Many2one('res.country', 'Country', required=True, default='Colombia')
 	_order = 'code'
 
 
